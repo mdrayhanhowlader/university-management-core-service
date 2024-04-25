@@ -10,7 +10,7 @@ router.get('/', AcademicSemesterController.getAllFromDb);
 router.get('/:id', AcademicSemesterController.getSingleSemester);
 router.post(
   '/create-semester',
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
+  // auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   validateRequest(AcademicSemesterValidation.create),
   AcademicSemesterController.createSemister
 );
